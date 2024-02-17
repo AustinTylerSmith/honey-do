@@ -1,0 +1,30 @@
+{
+  "usersWhoHaveAccess": [1,2],
+  "projects": [
+    {
+      "title": "",
+      "nextAction": "REOPEN",
+      "tasks": [
+        {
+          "description": "",
+          "finished": true
+        }
+      ],
+      "blockers": [
+        {
+          "description": "",
+          "timePassed": ""
+        }
+      ],
+      "notes": "",
+      "communication": [
+        {
+          "message": "",
+          "user": ""
+        }
+      ]
+    },
+    {
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+.project-card {
+    border-radius: 10px;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 1736px;
+    height: 98px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-section-1 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.card-section-2 {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.project-card-title {
+    color: #000;
+    font-family: Catamaran;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 30px;
+}
+
+.project-card-delete-btn {
+    border: none;
+    background: none;
+    color: red;
+    font-size: xxx-large;
+}
+
+.project-card-blocker-icon {
+    display: flex;
+    align-items: center;
+    font-size: xxx-large;
+    color: #F9C344;
+}
+
+.move-card-icon {
+    font-size: xxx-large;
+    margin-left: 5px;
+}
+
+.project-card-action-btn {
+    display: flex;
+    width: 183px;
+    height: 59px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #617AFF;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: Catamaran, cursive;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 30px;
+}
+
