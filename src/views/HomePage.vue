@@ -1,14 +1,27 @@
 <script setup lang="ts">
 import type { Project } from '@/models/Project'
 import '@/styling/projectCard.css'
-import draggableComponent from 'vuedraggable'
-import ProjectCard from "@/components/ProjectCard.vue";
+import ProjectCards from "@/components/ProjectCards.vue";
+import { type Ref, ref } from "vue";
 
-let projects: Project[] = [
+let projects: Ref<Project[]> = ref([
   {
     title: 'Build Honey Do',
     nextAction: 'Open',
-    tasks: [],
+    tasks: [
+      {
+        description: 'My Task 1',
+        finished: true
+      },
+      {
+        description: 'My Task 2',
+        finished: false
+      },
+      {
+        description: 'My Task 3',
+        finished: false
+      }
+    ],
     blockers: [
       {
         description: 'blocked',
@@ -20,8 +33,21 @@ let projects: Project[] = [
   },
   {
     title: 'Test Draggable',
-    nextAction: 'Open',
-    tasks: [],
+    nextAction: 'Close',
+    tasks: [
+      {
+        description: 'My Task 1',
+        finished: true
+      },
+      {
+        description: 'My Task 2',
+        finished: true
+      },
+      {
+        description: 'My Task 3',
+        finished: false
+      }
+    ],
     blockers: [
       {
         description: 'blocked',
@@ -33,8 +59,21 @@ let projects: Project[] = [
   },
   {
     title: 'Test Again',
-    nextAction: 'Open',
-    tasks: [],
+    nextAction: 'Re Open',
+    tasks: [
+      {
+        description: 'My Task 1',
+        finished: true
+      },
+      {
+        description: 'My Task 2',
+        finished: true
+      },
+      {
+        description: 'My Task 3',
+        finished: true
+      }
+    ],
     blockers: [
       {
         description: 'blocked',
@@ -44,18 +83,11 @@ let projects: Project[] = [
     notes: 'note test note',
     communication: []
   }
-]
+])
+
 </script>
 
 <template>
-  <draggableComponent v-model="projects" tag="ul">
-    <template #item="{ element: project }">
-      <div>
-        <li class="card-container">
-          <ProjectCard :project="project"/>
-        </li>
-      </div>
-    </template>
-  </draggableComponent>
+  <ProjectCards :projects="projects"/>
 </template>
 <style scoped></style>

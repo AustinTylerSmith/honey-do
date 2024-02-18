@@ -60,7 +60,6 @@
     align-items: center;
     flex-shrink: 0;
     border-radius: 10px;
-    background: #617AFF;
     color: #FAFAFA;
     text-align: center;
     font-family: Catamaran, cursive;
@@ -71,3 +70,36 @@
     margin: 30px;
 }
 
+.open-color {
+    background: #6C6C6C;
+}
+
+.close-color {
+    background: #617AFF;
+}
+
+.re-open-color {
+    background: #F9C344;
+    color: #6C6C6C !important;
+}
+
+#add-task-icon {
+    font-size: x-large;
+}
+
+#add-task-button {
+    width: 56px;
+    height: 54px;
+    background: #FAFAFA;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
