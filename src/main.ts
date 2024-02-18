@@ -2,11 +2,13 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import PrimeVue from 'primevue/config'
-import '@gai/gaig-icons'
-import '@gai/gaig-ui-theme'
+import Tooltip from 'primevue/tooltip';
+
+
 
 const app = createApp(App)
 
+app.directive('tooltip', Tooltip);
 app.use(router)
 app.use(PrimeVue)
 

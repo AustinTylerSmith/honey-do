@@ -4,7 +4,7 @@ import '@/styling/projectCard.css'
 import type { Project } from '@/models/Project'
 import draggableComponent from 'vuedraggable'
 import type { Task } from '@/models/Task'
-import ProgressBar from "primevue/progressbar";
+import ProgressBar from 'primevue/progressbar'
 
 const props = defineProps<{
   projects: Project[]
@@ -35,11 +35,12 @@ function tasksCompleted(tasks: Task[]): number {
           </div>
           <ProgressBar
             class="honey-done-bar"
-            :value="10"
+            :value="tasksCompleted(project.tasks)"
           ></ProgressBar>
           <div class="card-section-2">
             <i
-              v-if="true"
+              v-if="project.blockers.length > 0"
+              v-tooltip.top="'Blocked: '+ project.blockers[0].timePassed"
               class="project-card-blocker-icon pi pi-info-circle"
             ></i>
             <button
@@ -57,9 +58,9 @@ function tasksCompleted(tasks: Task[]): number {
         </div>
       </template>
     </draggableComponent>
-    <div id="add-task-button">
+    <button id="add-task-button">
       <i id="add-task-icon" class="pi pi-plus"></i>
-    </div>
+    </button>
   </div>
 </template>
 

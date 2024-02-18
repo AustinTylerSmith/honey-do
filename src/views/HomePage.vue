@@ -75,10 +75,6 @@ let projects: Ref<Project[]> = ref([
       }
     ],
     blockers: [
-      {
-        description: 'blocked',
-        timePassed: '3 hours and 20 minutes'
-      }
     ],
     notes: 'note test note',
     communication: []

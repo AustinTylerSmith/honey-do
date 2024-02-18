@@ -19,6 +19,7 @@
 .card-section-2 {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex: 1;
 }
 
@@ -39,22 +40,32 @@
     font-size: xxx-large;
 }
 
+.project-card-delete-btn:hover {
+    color: #FF7575;
+}
+
+.project-card-delete-btn:active {
+    font-size: xx-large;
+}
 .project-card-blocker-icon {
     display: flex;
     align-items: center;
     font-size: xxx-large;
     color: #F9C344;
+    height: fit-content;
 }
 
 .move-card-icon {
     font-size: xxx-large;
     margin-left: 5px;
+    color: #6C6C6C;
 }
 
 .project-card-action-btn {
     display: flex;
     width: 183px;
     height: 59px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -68,14 +79,28 @@
     font-weight: 400;
     line-height: normal;
     margin: 30px;
+    border: none;
+}
+
+.project-card-action-btn:active {
+    box-shadow: none;
 }
 
 .open-color {
     background: #6C6C6C;
 }
 
+.open-color:hover {
+    font-size: 30px !important;
+    background: #979797;
+}
+
 .close-color {
     background: #617AFF;
+}
+.close-color:hover {
+    font-size: 30px !important;
+    background: #7B90FF;
 }
 
 .re-open-color {
@@ -83,9 +108,16 @@
     color: #6C6C6C !important;
 }
 
+.re-open-color:hover {
+    font-size: 30px !important;
+    background: #FFD36C;
+    color: #6C6C6C !important;
+}
+
 #add-task-icon {
     font-size: x-large;
 }
+
 
 #add-task-button {
     width: 56px;
@@ -96,10 +128,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+}
+#add-task-button:active {
+    box-shadow: none;
+}
+
+#add-task-button:hover {
+    background: #6C6C6C;
+}
+
+#add-task-button:hover #add-task-icon{
+    font-size: xx-large;
 }
 
 #project-cards-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.honey-done-bar {
+    flex: 1;
+    background: #6C6C6C;
+    border-radius: 10px !important;
+}
+
+.p-progressbar .p-progressbar-value {
+    background: #F9C344 !important;
+}
+
+.p-progressbar .p-progressbar-label {
+    color: #6C6C6C;
 }
