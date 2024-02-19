@@ -10,9 +10,14 @@
     align-items: center;
 }
 
+.completed-task {
+    background: #069004 !important;
+}
+
 .card-section-1 {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex: 1;
 }
 
@@ -25,7 +30,7 @@
 
 .project-card-title {
     color: #000;
-    font-family: Catamaran;
+    font-family: Catamaran, cursive;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -47,6 +52,7 @@
 .project-card-delete-btn:active {
     font-size: xx-large;
 }
+
 .project-card-blocker-icon {
     display: flex;
     align-items: center;
@@ -98,6 +104,7 @@
 .close-color {
     background: #617AFF;
 }
+
 .close-color:hover {
     font-size: 30px !important;
     background: #7B90FF;
@@ -130,6 +137,7 @@
     align-items: center;
     border: none;
 }
+
 #add-task-button:active {
     box-shadow: none;
 }
@@ -138,7 +146,7 @@
     background: #6C6C6C;
 }
 
-#add-task-button:hover #add-task-icon{
+#add-task-button:hover #add-task-icon {
     font-size: xx-large;
 }
 
@@ -156,8 +164,32 @@
 
 .p-progressbar .p-progressbar-value {
     background: #F9C344 !important;
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: center;
 }
 
 .p-progressbar .p-progressbar-label {
     color: #6C6C6C;
+}
+
+#achievement-title {
+    color: #6C6C6C;
+    font-family: Catamaran, cursive;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 204px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 32px;
+}
+
+#title-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%
 }

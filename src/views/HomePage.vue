@@ -29,6 +29,7 @@ let projects: Ref<Project[]> = ref([
       }
     ],
     notes: 'note test note',
+    completed: false,
     communication: []
   },
   {
@@ -55,6 +56,7 @@ let projects: Ref<Project[]> = ref([
       }
     ],
     notes: 'note test note',
+    completed: false,
     communication: []
   },
   {
@@ -77,6 +79,7 @@ let projects: Ref<Project[]> = ref([
     blockers: [
     ],
     notes: 'note test note',
+    completed: true,
     communication: []
   }
 ])

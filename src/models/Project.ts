@@ -9,6 +9,7 @@ interface Project {
   blockers: Blocker[],
   notes:string,
   communication:Message[],
+  completed:boolean
 }
 
 export type {Project}

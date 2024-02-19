@@ -1,5 +1,6 @@
 body {
     background: #F9C344 !important;
+    margin: 0 !important;
 }
 .content-container {
     display: flex;
