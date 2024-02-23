@@ -162,6 +162,19 @@
     border-radius: 10px !important;
 }
 
+.empty-progress-bar {
+    flex: 1;
+    background: #6C6C6C;
+    border-radius: 10px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+}
+
+.no-tasks-completed {
+    color: #f9c344;
+}
+
 .p-progressbar .p-progressbar-value {
     background: #F9C344 !important;
     border-radius: 10px !important;

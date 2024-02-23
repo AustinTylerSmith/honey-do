@@ -41,15 +41,20 @@ function filterProjects(projects: Project[]): Project[] {
             <button class="project-card-delete-btn pi pi-times-circle"></button>
           </div>
           <ProgressBar
+            v-if="!(tasksCompleted(project.tasks) == 0)"
             class="honey-done-bar"
             :value="tasksCompleted(project.tasks)"
           ></ProgressBar>
+          <div
+            v-if="tasksCompleted(project.tasks) == 0"
+            class="empty-progress-bar"
+          ><span class="no-tasks-completed">No Tasks Completed</span></div>
           <div class="card-section-2">
             <div v-tooltip.top="'Blocked: ' + project.blockers[0].timePassed">
-            <i
-              v-if="project.blockers.length > 0"
-              class="project-card-blocker-icon pi pi-info-circle"
-            ></i>
+              <i
+                v-if="project.blockers.length > 0"
+                class="project-card-blocker-icon pi pi-info-circle"
+              ></i>
             </div>
             <button
               :class="
