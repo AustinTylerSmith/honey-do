@@ -35,34 +35,38 @@ function filterProjects(projects: Project[]): Project[] {
     >
       <template #item="{ element: project }">
         <div class="project-card" v-if="!project.completed">
-          <i class="move-card-icon pi pi-arrows-v handle"></i>
           <div class="card-section-1">
-            <span class="project-card-title">{{ project.title }}</span>
-            <button class="project-card-delete-btn pi pi-times-circle"></button>
+          <i class="move-card-icon pi pi-arrows-v handle smaller"></i>
+          <span class="project-card-title smaller">{{ project.title }}</span>
+          </div>
+          <div class="card-section-2">
+            <button class="project-card-delete-btn pi pi-times-circle smaller"></button>
           </div>
           <ProgressBar
             v-if="!(tasksCompleted(project.tasks) == 0)"
-            class="honey-done-bar"
+            class="honey-done-bar no-bar-needed"
             :value="tasksCompleted(project.tasks)"
           ></ProgressBar>
           <div
             v-if="tasksCompleted(project.tasks) == 0"
-            class="empty-progress-bar"
+            class="empty-progress-bar no-bar-needed"
           ><span class="no-tasks-completed">No Tasks Completed</span></div>
-          <div class="card-section-2">
+          <div class="card-section-3">
             <div v-tooltip.top="'Blocked: ' + project.blockers[0].timePassed">
               <i
                 v-if="project.blockers.length > 0"
-                class="project-card-blocker-icon pi pi-info-circle"
+                class="project-card-blocker-icon pi pi-info-circle smaller"
               ></i>
             </div>
+          </div>
+          <div class="card-section-4">
             <button
               :class="
                 project.nextAction == 'Open'
-                  ? 'open-color project-card-action-btn'
+                  ? 'open-color project-card-action-btn smaller'
                   : project.nextAction == 'Close'
-                    ? 'close-color project-card-action-btn'
-                    : 're-open-color project-card-action-btn'
+                    ? 'close-color project-card-action-btn smaller'
+                    : 're-open-color project-card-action-btn smaller'
               "
             >
               {{ project.nextAction }}
@@ -83,21 +87,21 @@ function filterProjects(projects: Project[]): Project[] {
       :key="index"
     >
       <div class="card-section-1">
-        <span class="project-card-title">{{ project.title }}</span>
-        <button class="project-card-delete-btn pi pi-times-circle"></button>
+        <span class="project-card-title smaller">{{ project.title }}</span>
+        <button class="project-card-delete-btn pi pi-times-circle smaller"></button>
       </div>
       <ProgressBar
-        class="honey-done-bar"
+        class="honey-done-bar no-bar-needed"
         :value="tasksCompleted(project.tasks)"
       ></ProgressBar>
       <div class="card-section-2">
         <button
           :class="
             project.nextAction == 'Open'
-              ? 'open-color project-card-action-btn'
+              ? 'open-color project-card-action-btn smaller'
               : project.nextAction == 'Close'
-                ? 'close-color project-card-action-btn'
-                : 're-open-color project-card-action-btn'
+                ? 'close-color project-card-action-btn smaller'
+                : 're-open-color project-card-action-btn smaller'
           "
         >
           {{ project.nextAction }}
