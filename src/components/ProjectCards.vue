@@ -36,11 +36,20 @@ function filterProjects(projects: Project[]): Project[] {
       <template #item="{ element: project }">
         <div class="project-card" v-if="!project.completed">
           <div class="card-section-1">
-          <i class="move-card-icon pi pi-arrows-v handle smaller"></i>
-          <span class="project-card-title smaller">{{ project.title }}</span>
+            <i class="move-card-icon pi pi-arrows-v handle smaller"></i>
+            <router-link
+              class="page-detail-link"
+              :to="{ name: 'Project', params: { id: project.id } }"
+            >
+              <span class="project-card-title smaller">{{
+                project.title
+              }}</span>
+            </router-link>
           </div>
           <div class="card-section-2">
-            <button class="project-card-delete-btn pi pi-times-circle smaller"></button>
+            <button
+              class="project-card-delete-btn pi pi-times-circle smaller"
+            ></button>
           </div>
           <ProgressBar
             v-if="!(tasksCompleted(project.tasks) == 0)"
@@ -50,7 +59,9 @@ function filterProjects(projects: Project[]): Project[] {
           <div
             v-if="tasksCompleted(project.tasks) == 0"
             class="empty-progress-bar no-bar-needed"
-          ><span class="no-tasks-completed">No Tasks Completed</span></div>
+          >
+            <span class="no-tasks-completed">No Tasks Completed</span>
+          </div>
           <div class="card-section-3">
             <div v-tooltip.top="'Blocked: ' + project.blockers[0].timePassed">
               <i
@@ -75,9 +86,11 @@ function filterProjects(projects: Project[]): Project[] {
         </div>
       </template>
     </draggableComponent>
-    <button id="add-task-button">
-      <i id="add-task-icon" class="pi pi-plus"></i>
-    </button>
+    <router-link :to="{ name: 'Project', params: { id: projects.length + 1 } }">
+      <button id="add-task-button">
+        <i id="add-task-icon" class="pi pi-plus"></i>
+      </button>
+    </router-link>
     <div id="title-container">
       <span id="achievement-title" v-if="true">Achievements</span>
     </div>
@@ -87,8 +100,15 @@ function filterProjects(projects: Project[]): Project[] {
       :key="index"
     >
       <div class="card-section-1">
-        <span class="project-card-title smaller">{{ project.title }}</span>
-        <button class="project-card-delete-btn pi pi-times-circle smaller"></button>
+        <router-link
+          class="page-detail-link"
+          :to="{ name: 'Project', params: { id: project.id } }"
+        >
+          <span class="project-card-title smaller">{{ project.title }}</span>
+        </router-link>
+        <button
+          class="project-card-delete-btn pi pi-times-circle smaller"
+        ></button>
       </div>
       <ProgressBar
         class="honey-done-bar no-bar-needed"

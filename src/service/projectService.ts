@@ -1,7 +1,8 @@
 import type { Project } from '@/models/Project'
 
-const projects:Project[] = [
+const projects: Project[] = [
   {
+    id: 1,
     title: 'Build Honey Do',
     nextAction: 'Open',
     tasks: [
@@ -29,6 +30,7 @@ const projects:Project[] = [
     communication: []
   },
   {
+    id: 2,
     title: 'Make House Plan',
     nextAction: 'Open',
     tasks: [
@@ -56,6 +58,7 @@ const projects:Project[] = [
     communication: []
   },
   {
+    id: 3,
     title: 'Build House',
     nextAction: 'Close',
     tasks: [
@@ -83,6 +86,7 @@ const projects:Project[] = [
     communication: []
   },
   {
+    id: 4,
     title: 'Complete Coding Bootcamp',
     nextAction: 'Re Open',
     tasks: [
@@ -110,8 +114,18 @@ const projects:Project[] = [
     communication: []
   }
 ]
- function retrieveProjectsForUser(): Project[] {
+
+function retrieveProjectsForUser(): Project[] {
   return projects
 }
 
-export { retrieveProjectsForUser }
+function getProjectById(id: number): Project | null {
+  for (const project of projects) {
+    if (project.id === id) {
+      return project
+    }
+  }
+  return null
+}
+
+export { retrieveProjectsForUser, getProjectById}

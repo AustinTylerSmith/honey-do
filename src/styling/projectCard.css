@@ -227,6 +227,10 @@
     width: 100%
 }
 
+.page-detail-link {
+    text-decoration: none;
+}
+
 @media screen and (max-width:1350px)  {
     .no-bar-needed {
         display: none!important;

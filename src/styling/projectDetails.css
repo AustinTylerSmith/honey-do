@@ -1,0 +1,118 @@
+.project-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-title-input {
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-family: Catamaran, cursive;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+    background-color: transparent;
+    width: 90%
+}
+
+.detail-title-input:focus {
+    outline: none !important;
+}
+
+.all-list-container {
+    border-radius: 10px 10px 0 10px;
+    background: #FAFAFA;
+    height: fit-content;
+    padding: 20px;
+}
+
+.list-container {
+    border-bottom: 3px solid #6c6c6c;
+    margin: 0 5px 5px 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.my-tasks-and-blockers {
+    display: flex;
+    width: 97vw;
+}
+
+.list-input {
+    border: none !important;
+    background: #FAFAFA;
+    color: #000;
+    font-family: Catamaran, cursive;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+}
+
+.list-input:focus {
+    outline: none !important;
+    border: 1px solid red;
+    box-shadow: 0 0 10px #f9c344;
+}
+
+
+.border-top {
+    border-bottom: 3px solid #6c6c6c;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.task-checkbox {
+    zoom: 1.5;
+    transform: scale(1.5);
+    border-radius: 10px;
+    margin-right: 5px;
+    accent-color: #f9c344;
+}
+
+#project-tasks {
+    margin-right: 30px;
+}
+
+.list-with-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.blocker-icon {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    color: #F9C344;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+.section-header {
+    color: #6C6C6C;
+    font-family: Catamaran, cursive;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#title-action-container {
+    width: 97vw;
+    height: fit-content;
+    margin: 30px;
+    border-radius: 10px;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+}
+
+#project-action-button {
+
+}
