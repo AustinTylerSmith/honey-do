@@ -106,13 +106,26 @@
 #title-action-container {
     width: 97vw;
     height: fit-content;
-    margin: 30px;
     border-radius: 10px;
     background: #FAFAFA;
     display: flex;
     justify-content: space-between;
 }
 
-#project-action-button {
+.project-detail-component {
+    margin-top: 30px;
+}
 
+.my-editor {
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    width: 48vw;
+}
+
+#editor-container {
+    width: 97vw;
+}
+
+.my-editor > .p-editor-toolbar {
+    border-radius: 10px 10px 0 0;
 }

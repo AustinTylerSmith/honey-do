@@ -5,6 +5,8 @@ import { getProjectById } from '@/service/projectService'
 import { useRoute } from 'vue-router'
 import Tasks from '@/components/Tasks.vue'
 import Blockers from '@/components/Blockers.vue'
+import Editor from 'primevue/editor'
+import ProjectTitle from "@/components/ProjectTitle.vue";
 
 let project: Ref<Project> = ref({
   id: Number(useRoute().params.id),
@@ -27,24 +29,20 @@ onMounted(() => {
 
 <template>
   <div class="project-details-container">
-    <div id="title-action-container">
-      <input class="detail-title-input" v-model="project.title" />
-      <button
-        id="project-action-button"
-        :class="
-          project.nextAction == 'Open'
-            ? 'open-color project-card-action-btn smaller'
-            : project.nextAction == 'Close'
-              ? 'close-color project-card-action-btn smaller'
-              : 're-open-color project-card-action-btn smaller'
-        "
-      >
-        {{ project.nextAction }}
-      </button>
+    <div class="project-detail-component">
+      <ProjectTitle :project="project"/>
     </div>
-    <div class="my-tasks-and-blockers">
+    <div class="my-tasks-and-blockers project-detail-component">
       <Tasks :tasks="project.tasks" id="project-tasks"></Tasks>
       <Blockers :blockers="project.blockers"></Blockers>
+    </div>
+    <div id="editor-container" class="flex flex-column justify-content-start project-detail-component">
+      <span class="section-header">Notes</span>
+      <Editor
+        class="my-editor"
+        v-model="project.notes"
+        editorStyle="height: 320px"
+      />
     </div>
   </div>
 </template>
